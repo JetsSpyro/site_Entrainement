@@ -1,0 +1,78 @@
+
+
+
+h1
+{
+	color: white;
+	font-family: fantasy;
+	text-transform:capitalize;
+	text-shadow: 4px 4px 5px grey;
+	letter-spacing: 2px;
+    word-spacing: 4px;
+    line-height: 1.5;
+    font-size:300%;
+}
+
+h2
+{
+	color: white;
+	font-family: fantasy;
+	text-transform:capitalize;
+	text-shadow: 4px 4px 5px grey;
+	letter-spacing: 2px;
+    word-spacing: 4px;
+    line-height: 1.5;
+    font-size:1000%;
+}
+
+
+li
+{
+	color: white;
+	font-family: fantasy;
+	text-transform: capitalize;
+	word-spacing: 6px;
+	letter-spacing: 1.5px;
+	font-size: 150%;
+	text-align: left;
+}
+p
+{
+	color: white;
+	font-family: fantasy;
+	text-transform: capitalize;
+	word-spacing: 6px;
+	letter-spacing: 1.5px;
+	font-size: 150%;
+}
+
+
+
+body
+{
+	background-color: black;
+
+}
+
+
+.boutons
+{
+	align-content: right;
+
+}
+
+
+#mur
+{
+	width: 900px;
+	margin:0 auto;
+	background-color:black;
+	text-align:center;
+	align-content: center;
+}
+
+
+ul li
+{
+	list-style-type: none;
+}
