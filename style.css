@@ -1,78 +1,353 @@
-
-
-
-h1
-{
-	color: white;
-	font-family: fantasy;
-	text-transform:capitalize;
-	text-shadow: 4px 4px 5px grey;
-	letter-spacing: 2px;
-    word-spacing: 4px;
-    line-height: 1.5;
-    font-size:300%;
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+.codeby{
+  font-size: 40%;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-h2
-{
-	color: white;
-	font-family: fantasy;
-	text-transform:capitalize;
-	text-shadow: 4px 4px 5px grey;
-	letter-spacing: 2px;
-    word-spacing: 4px;
-    line-height: 1.5;
-    font-size:1000%;
+.fleche {
+  position: relative;
+  overflow: hidden;
+  width: 100px;
+  height: 100px; 
 }
 
-
-li
-{
-	color: white;
-	font-family: fantasy;
-	text-transform: capitalize;
-	word-spacing: 6px;
-	letter-spacing: 1.5px;
-	font-size: 150%;
-	text-align: left;
-}
-p
-{
-	color: white;
-	font-family: fantasy;
-	text-transform: capitalize;
-	word-spacing: 6px;
-	letter-spacing: 1.5px;
-	font-size: 150%;
+#slide {
+  position: absolute;
+  left: -100px;
+  width: 100px;
+  height: 100px;
+  -webkit-animation: slide 0.5s forwards;
+  -webkit-animation-delay: 0.5s;
+  animation: slide 0.5s forwards;
+  animation-delay: 0.2s;
 }
 
+@-webkit-keyframes slide {
+  100% { left: 0; }
+}
+
+@keyframes slide {
+  100% { left: 0; }
+}
+  
+html {
+    height:  100%;
+  }
 
 
 body
 {
-	background-color: black;
+	background: #191A19;
+    min-height: 200vh;
+	transition: .5s;
+    min-height: 45%;
+}
 
+h1{
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h2{
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 200%;
+}
+
+h3{
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h4{
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 300%;
+  text-shadow: 4px 4px 5px grey;
+}
+
+p{
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.fleche{
+  animation-name: fleche;
+  animation-duration: 2s;
+}
+
+:root {
+    background: #191A19;
+    --colorShadeA: #2b7439;
+    --colorShadeB: #8abea6;
+    --colorShadeC: #bad8c4;
+    --colorShadeD: #defcee;
+    --colorShadeE: #bfd4cb;
+  }
+  
+
+  * {
+    box-sizing: border-box;
+  }
+  *::before, *::after {
+    box-sizing: border-box;
+  }
+
+    
+  button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: 1.5rem;
+      color:var(--colorShadeA);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: inherit;
+  }
+  
+  button.bigbutton {
+     padding: 1em 2em;
+     border: 2px solid var(--colorShadeA);
+    border-radius: 1em;
+    background: var(--colorShadeE);
+  transform-style: preserve-3d;
+     transition: all 175ms cubic-bezier(0, 0, 1, 1);
+  }
+  button.bigbutton::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--colorShadeC);
+    border-radius: inherit;
+      box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.75em 0 0 var(--colorShadeA);
+   transform: translate3d(0, 0.75em, -1em);
+       transition: all 175ms cubic-bezier(0, 0, 1, 1);
+  }
+  
+  
+  button.bigbutton:hover {
+    background: var(--colorShadeD);
+    transform: translate(0, 0.375em);
+  }
+  
+  button.bigbutton:hover::before {
+    transform: translate3d(0, 0.75em, -1em);
+  }
+  
+button.bigbutton:active {
+              transform: translate(0em, 0.75em);
+}
+  
+button.bigbutton:active::before {
+    transform: translate3d(0, 0, -1em);
+    
+        box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.25em 0 0 var(--colorShadeB);
+  
+}
+
+//secondbutton
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: 1.5rem;
+    color:var(--colorShadeA);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: inherit;
+}
+
+button.secondbutton {
+  padding: 1em 2em;
+  border: 2px solid var(--colorShadeA);
+ border-radius: 1em;
+ background: var(--colorShadeE);
+transform-style: preserve-3d;
+  transition: all 175ms cubic-bezier(0, 0, 1, 1);
+}
+button.secondbutton::before {
+ position: absolute;
+ content: '';
+ width: 100%;
+ height: 100%;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: var(--colorShadeC);
+ border-radius: inherit;
+   box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.75em 0 0 var(--colorShadeA);
+transform: translate3d(0, 0.75em, -1em);
+    transition: all 175ms cubic-bezier(0, 0, 1, 1);
 }
 
 
-.boutons
-{
-	align-content: right;
+button.secondbutton:hover {
+ background: var(--colorShadeD);
+ transform: translate(0, 0.375em);
+}
+
+button.secondbutton:hover::before {
+ transform: translate3d(0, 0.75em, -1em);
+}
+
+button.secondbutton:active {
+           transform: translate(0em, 0.75em);
+}
+
+button.secondbutton:active::before {
+ transform: translate3d(0, 0, -1em);
+ 
+     box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.25em 0 0 var(--colorShadeB);
 
 }
 
+//troisiemebouton
 
-#mur
-{
-	width: 900px;
-	margin:0 auto;
-	background-color:black;
-	text-align:center;
-	align-content: center;
+button {
+position: relative;
+display: inline-block;
+cursor: pointer;
+outline: none;
+border: 0;
+vertical-align: middle;
+text-decoration: none;
+font-size: 1.5rem;
+  color:var(--colorShadeA);
+font-weight: 700;
+text-transform: uppercase;
+font-family: inherit;
+}
+
+button.thirdbutton {
+padding: 1em 2em;
+border: 2px solid var(--colorShadeA);
+border-radius: 1em;
+background: var(--colorShadeE);
+transform-style: preserve-3d;
+transition: all 175ms cubic-bezier(0, 0, 1, 1);
+}
+button.thirdbutton::before {
+position: absolute;
+content: '';
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: var(--colorShadeC);
+border-radius: inherit;
+ box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.75em 0 0 var(--colorShadeA);
+transform: translate3d(0, 0.75em, -1em);
+  transition: all 175ms cubic-bezier(0, 0, 1, 1);
 }
 
 
-ul li
-{
-	list-style-type: none;
+button.thirdbutton:hover {
+background: var(--colorShadeD);
+transform: translate(0, 0.375em);
 }
+
+button.thirdbutton:hover::before {
+transform: translate3d(0, 0.75em, -1em);
+}
+
+button.thirdbutton:active {
+         transform: translate(0em, 0.75em);
+}
+
+button.thirdbutton:active::before {
+transform: translate3d(0, 0, -1em);
+
+   box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.25em 0 0 var(--colorShadeB);
+
+}
+
+.header{
+	padding: 50px;
+    text-align: center;
+    background: #1E5128 ;
+    color: white;
+    font-size: 30px;
+    border-radius: 40px;
+    padding: 8px;
+    text-align: center;
+    box-shadow:
+    inset 20px 0 80px #191A19,
+    inset 20px 0 300px #1E5128,
+    -3px 0 5px #1E5128,
+    5px 0 5px #1E5128;
+ 
+}
+
+.countdown{
+	padding: 50px;
+    text-align: center;
+    background: #000000 ;
+    color: white;
+    font-size: 30px;
+    border-radius: 40px;
+    padding: 8px;
+    text-align: center;
+    box-shadow:
+    inset 20px 0 80px #191A19,
+    inset 20px 0 300px #1E5128,
+    -3px 0 5px #1E5128,
+    5px 0 5px #1E5128;
+ 
+}
+
+.themeContainer{
+ position: fixed;
+ top: 6;
+}
+
+.theme{
+ height: 50px;
+ width: 50px;
+ cursor: pointer;
+ border-radius: 30px;
+ padding: 8px;
+ text-align: center;
+}
+
+#black {
+position: relative;
+top: 400px;
+left: 50px;
+background: #191A19;
+border: -10px solid white;
+}
+
+#green {
+position: relative;
+left: 187.5px;
+top: -10px;
+background: #D8E9A8;
+border: 2px solid white;
+}
+
+.blackTheme{
+background: #191A19;
+color: #D8E9A8;
+}
+
+.greenTheme{
+background: #D8E9A8;
+color: #191A19;
+}
+
